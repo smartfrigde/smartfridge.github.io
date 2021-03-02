@@ -1,0 +1,14 @@
+{
+"Hell": {
+  "mayor": "No_Anime",
+  "nation": "Animeland",
+  "assistants": "me#why#are#there#hashtags#like#wtf",
+  "townBoard": "Based city",
+  "tag": "HL",
+  "open": "no",
+  "public": "idk",
+  "spawn": "0000#0000#0000",
+  "outpostSpawns": "0000#0000#0000",
+  "outlaws": "based#uradude#urakuk#zuki#ratnight",
+  "registered": "104024902489240902490249024099999999999999999999999"}
+}
