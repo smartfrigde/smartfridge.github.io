@@ -1,0 +1,14 @@
+.spoiler-1PPAUc.hiddenSpoilers-1ksnR6 {
+    filter: blur(0);
+}
+.spoilerWarning-2aAZq1 {
+    display: none;
+}
+.theme-dark .spoilerText-3p6IlD.hidden-HHr2R9, .theme-dark .spoilerText-3p6IlD.hidden-HHr2R9:hover {
+    background-color: transparent;
+    cursor: text;
+}
+.spoilerText-3p6IlD.hidden-HHr2R9 .inlineContent-3ZjPuv {
+    opacity: 1;
+    cursor: text;
+}
