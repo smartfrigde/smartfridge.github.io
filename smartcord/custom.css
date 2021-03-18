@@ -88,9 +88,6 @@
 }
 
 
-@import url("https://enhanceddiscord.com/theme.css");
-@import url("https://cdn.jsdelivr.net/gh/Lightcord/BetterDiscordAddons/Themes/SettingPopout/SettingPopout.css");
-
 .theme-dark {
     --bg: transparent;
     --bg-overlay: rgba(0, 0, 0, 0.7972451874704072);
@@ -181,4 +178,20 @@
 }
 .titleBar-AC4pGV:not(.typeMacOS-3EmCyP):after {
     content: "SmartCord" !important
+}
+.userPopout-3XzG_A .body-3iLsc4 {
+    max-height: 200px;
+    overflow-y: auto;
+}
+.theme-dark .circleIconButton-jET_ig {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    margin-left: 0px;
+    padding: 10px;
+    background-color: var(--accent-color);
+    border:  none;
+    color:  #fff;
+    box-shadow: 0 0 19px #000;
 }
