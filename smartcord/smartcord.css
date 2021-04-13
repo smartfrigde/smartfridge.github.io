@@ -1,1 +1,510 @@
+/*Theme used: MidnightCord made by TranquillyUnpleasant */
+/*https://github.com/TranquillyUnpleasant/midnightcord */
+/* imports */
+@import url("https://nfld99.github.io/Better-Discord/Source_Code/Addons/Use_Fonts/DiscordFont.css");
 
+/* variables and shit */
+:root {
+  /* self explanatory (hopefully) */
+  --background-accent: #14171f; !important;
+
+  /* colour of links (including in embeds) */
+  --text-link: #d9a2eb;
+
+  /* colour of right hand side of screen and chat */
+  --background-primary: #181c25 !important;
+
+  /* embed backround/text channel list/member list colour */
+  --background-secondary: #14171f !important;
+
+  /* colour of change status/mute mic/deafen/user settings patch */
+  --background-secondary-alt: #0c0e13 !important;
+
+  /* colour of panel when you click on server name/edit message */
+  --background-floating: #0c0e13 !important;
+
+  /* colour of border around [top of] discord */
+  --background-tertiary: #0c0e13 !important;
+
+  /* colour of text box that you type in */
+  --channeltextarea-background: var(--background-accent) !important;
+
+  /* colours of things when you hover over them; e.g. a channel/user */
+  --background-modifier-hover: rgba(255, 255, 255, 0.01) !important;
+  --background-modifier-active: rgba(255, 255, 255, 0.03) !important;
+  --background-modifier-selected: rgba(255, 255, 255, 0.04) !important;
+
+  /* colour of channel name's text */
+  --channels-default: #9f9f9f !important;
+
+  /* colour of message when hovering over it */
+  --message-hover: #15181e !important;
+
+  /* colour of search bar */
+  --search-menu-colour: #0c0e13 !important;
+
+  /* colour of spoilered text */
+  --spoiler-colour: #00000d;
+
+  /* colour for the following things:
+     - channel icon, text with "Today at ..." by message
+     - "Message #channel/user" */
+  --text-muted: #b6b6b6 !important;
+
+  /* colour of text in messages and discord logo in top
+  left hand corner */
+  --text-normal: #fbfbfb !important;
+
+  /* colour of interactive buttons when looked at, e.g.:
+     - pinned messages
+     - mute mic/deafen/user settings
+     - mentions inbox
+     - text names of settings */
+  --interactive-normal: #c8c8c8 !important;
+
+  /* colour of text/button in interactive buttons (and text channel
+  names) when hovered over */
+  --interactive-hover: #9d3ebd !important;
+
+  /* colour of things that are currently selected (e.g. colour of
+  channel name that you are participating in) */
+  --interactive-active: #e8a1ff !important;
+
+  /* colour of muted channel names */
+  --interactive-muted: #614869 !important;
+
+  /* colour of:
+     - text in a codeblock
+     - text in a channel topic when you look but don't click on it
+     - the bit that says ROLES and NOTE when looking at profile
+       via member list
+     - the colour of someone's username (if they don't have a nickname)
+       when accessed via member list */
+  --header-secondary: #c9c9c9 !important;
+
+
+  /* i dont know what any of the following does but i suppose
+  its important yo */
+  --toast-background: var(--background-primary) !important;
+  --toast-header: var(--background-tertiary) !important;
+  --toast-contents: var(--background-secondary) !important;
+  --toast-border: var(--background-tertiary) !important;
+  --toast-box-shadow: rgba(0, 0, 0, .2) !important;
+  --offline-color: #3c3c3c !important;
+}
+
+
+/* Add role box (thanku Luckfire!!!) */
+  /* Add Role header */
+  .container-VSDcQc > .header-2bNvm4 {
+    background-color: var(--background-secondary) !important;
+  }
+  .container-VSDcQc > .autocompleteShadow-iiGWFU {
+    background-color: var(--background-primary) !important;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2),
+                0 0 0 1px var(--background-secondary);
+  }
+  .container-VSDcQc > .autocompleteArrowWrapper-3Z7OuM >
+  .autocompleteArrow-Zxoy9H {
+    background-color: var(--background-primary) !important;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2),
+                0 0 0 1px var(--background-secondary);
+  }
+
+
+/* Hiding the @ symbol in DMs (thanks to turkey snapper#0001!) */
+  /* apparently this only works if discord is in english
+  this actually hides the button itself */
+  [aria-label='Direct Message'] {
+    display: none;
+  }
+  /* pads it 12px from the left so the name doesnt look squished */
+  .cursorPonter-YEp76E { 
+    padding-left: 12px
+  }
+
+
+/* Colour of boxes of ANY POPUP e.g. delete/pin message
+(thank you so much LuckFire#4800!!!) */
+.root-1gCeng {
+  background-color: var(--background-primary) !important;
+}
+
+
+/* Blurred notes on a user (when clicked in member list
+and on profile) */
+  .note-QfFU8y textarea {
+    filter: blur(5px);
+    transition: .2s cubic-bezier(.2, .11, 0, 1);
+  }
+  .note-QfFU8y textarea:focus, .note-QfFU8y textarea:hover {
+    filter: none;
+    transition: .2s cubic-bezier(.2, .11, 0, 1);
+  }
+  .note-3HfJZ5 textarea {
+    filter: blur(5px);
+    transition: .2s cubic-bezier(.2, .11, 0, 1);
+  }
+  .note-3HfJZ5 textarea:focus, .note-3HfJZ5 textarea:hover {
+    filter: none;
+    transition: .2s cubic-bezier(.2, .11, 0, 1);
+  }
+
+
+/* Bot tags */
+  /* colour of the tag (backround and text) */
+  [class*="botTagCozy-"], [class*="botTag-"] {
+    background-color: #8000a0;
+    color: white;
+  }
+
+  /* not too sure what this does but without it, the colour
+  is just a box inside the tag rather than the whole tag being
+  the same colour */
+  .botTagRegular-2HEhHi span, .botTagInvert-18-95s span {
+    display: none;
+  }
+
+  /* ah yes, the boat tag */
+  .botTagRegular-2HEhHi::after, .botTagInvert-18-95s::after {
+    content: 'beep boop';
+  }
+
+
+/* Message delete */
+.theme-dark .message-2qRu38 {
+  background-color: var(--background-primary) !important;
+}
+
+
+/* Discord icon colour in top left hand corner */
+.homeIcon-tEMBK1 {
+  color: var(--text-link);
+}
+
+
+/* Discord watermark text in top left hand corner */
+  .wordmark-2iDDfm svg {
+    width: 0px;
+  }
+  .wordmark-2iDDfm:after {
+    font-family: "Discord";
+    content: "This is definitely not illegal what are you talking about...";
+    font-size: 2px;
+    background: rgb(255, 255, 255, 0.3);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    top: 6px;
+  }
+
+
+/* Tiffany blue Discord join/explore buttons */
+  .circleIconButton-jET_ig svg path{
+    fill: var(--text-link);
+  }
+  .circleIconButton-jET_ig.selected-ugP_am{
+    background-color: var(--text-link);
+  }
+  .circleIconButton-jET_ig.selected-ugP_am svg path{
+    fill: white;
+  }
+
+
+/* Feedback emojis after a call */
+  .emojiHappy-1hbF93 {
+    background-image: url("/assets/da3651e59d6006dfa5fa07ec3102d1f3.svg");
+  }
+  .emojiNeutral-14asfM {
+    background-image: url("/assets/fa9b378aed10bba1aea54ca34e76fe4b.svg");
+  }
+  .emojiSad-1GqgAQ {
+    background-image: url("/assets/9dc0c15c9e35f7ba86150ae12e895d29.svg");
+  }
+
+
+/* Friend list, block list, etc */
+.peopleColumn-29fq28 {
+  background-color: var(--background-accent);
+}
+
+
+/* Hide GIF and present boxes when typing a message */
+.button-3AYNKb {
+  display: none;
+}
+
+
+/* Hide the help button on the upper right */
+.iconWrapper-2OrFZ1[aria-label=Help] {
+  display: none;
+}
+
+
+/* Make the embed border "wrap around" the embed a bit more */
+.embed-IeVjo6 {
+  border-radius: 3px;
+}
+
+
+/* Mention suggestions when typing @something */
+  .autocompleteInner-zh20B_ {
+    background-color: var(--background-tertiary) !important;
+  }
+  .selectorSelected-1_M1WV {
+    background-color: var(--background-floating) !important;
+  }
+
+
+/* Message delete TEXT BOX colour */
+.theme-dark .message-2qRu38 {
+  background-color: var(--channeltextarea-background) !important;
+}
+
+
+/* Message hovering */
+div.message-2qnXI6:hover {
+  background-color: var(--message-hover) !important;
+}
+
+
+/* Make pinned messages wider */
+.messagesPopoutWrap-1MQ1bW{
+  width: 550px;
+}
+
+
+/* Profile when clicked in member list */
+  /* footer colour */
+  .flex-1xMQg5.flex-1O1GKY.vertical-V37hAW.flex-1O1GKY.directionColumn-35P_nr.justifyCenter-3D2jYp.alignCenter-1dQNNs.noWrap-3jynv6.headerTop-3C2Zn0{
+    background-color: var(--background-tertiary) !important;
+  }
+
+  /* no idea what this does tbh */
+  .scroller-2FKFPG.systemPad-3UxEGl.bodyInner-245q0L {
+    background-color: #300050 !important;  /* edited from var(--background-secondary) */
+  }
+
+  /* role box backround colour */
+  .body-3iLsc4 {
+    background-color: var(--background-secondary-alt) !important;
+  }
+
+  /* footer colour (where "Message @user" and "Right click user for more" are embedded) */
+  .footer-1fjuF6 {
+    background-color: var(--background-secondary-alt) !important;
+  }
+
+  /* colour of "Message @user" box */
+  .quickMessage-2XpSaN.quickMessage-1yeL4E {
+    background-color: var(--background-tertiary) !important;
+  }
+
+  /* colour of the "Playing" box */
+  .activityUserPopout-2yItg2.activity-11LB_k {
+    background-color: var(--background-tertiary) !important;
+  }
+
+  /* no idea what this does lol */
+  .button-1Pkqso.button-38aScr.lookOutlined-3sRXeN.colorWhite-rEQuAQ.buttonSize-2Pmk-w.fullWidth-1orjjo.grow-q77ONN {
+    background-color: var(--background-secondary) !important;
+  }
+
+
+/* Better Playing Modals, again from Luckfire#4800 :') */
+  .headerPlaying-j0WQBV, 
+  .topSectionPlaying-1J5E4n {
+    background-color: var(--background-accent);
+  }
+  .headerSpotify-zpWxgT, 
+  .topSectionSpotify-1lI0-P {
+    background-color: var(--background-accent);
+  }
+  .headerStreaming-2FjmGz, 
+  .topSectionStreaming-1Tpf5X {
+    background-color: var(--background-accent);
+  }
+
+
+/* Reaction box colour */
+  /* main box */
+  .reactors-Blmlhw.thin-1ybCId.scrollerBase-289Jih.fade-2kXiP2 {
+    background-color: var(--background-primary) !important;
+  }
+
+  /* colour of scroller on side listing emoji reaction counts */
+  .scroller-1-nKid.thin-1ybCId.scrollerBase-289Jih.fade-2kXiP2 {
+    background-color: var(--background-primary) !important;
+  }
+
+
+/* Search bar colour */
+.searchBar-3dMhjb {
+  background-color: var(--search-menu-colour) !important;
+}
+
+
+/* Sets backround colour for when you click on Server Boost */
+.perksModalContentWrapper-2HU6uL {
+  background: var(--background-accent) !important;
+}
+
+
+/* Spoilers */
+  /* spoiler colour */
+  .spoilerWarning-2aAZq1,
+  .spoilerText-3p6IlD.hidden-HHr2R9 {
+    background-color: var(--spoiler-colour) !important;
+  }
+
+  /* reveal spoiler on hover (click as well ofc) */
+  .spoilerText-3p6IlD.hidden-HHr2R9:hover .inlineContent-3ZjPuv {
+    opacity: 1;
+    border-radius: 3px;
+  }
+
+
+/* Inline status selection */
+  .status-1fhblQ, .description-2L932D {
+    display: none;
+  }
+  .separator-2I32lJ {
+    display: none;
+  }
+  .mask-1qbNWk.icon-1IxfJ2 {
+    --status-icon-size: 75%;
+    height: var(--status-icon-size); 
+    width: var(--status-icon-size);
+    margin-left: 33%;
+  }
+  .animatorTop-2Y7x2r.scale-3iLZhb.didRender-33z1u8 >
+  .menu-3sdvDG.styleFixed-sX-yHV > .scroller-3BxosC.thin-1ybCId.scrollerBase-289Jih {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto auto auto;
+    visibility: visible;
+  }
+  .item-1tOPte.colorDefault-2K3EoJ:nth-of-type(7) {
+    grid-column: 1/5;
+  }
+  .animatorTop-2Y7x2r.scale-3iLZhb.didRender-33z1u8 {
+    transition: opacity 0.15s linear 0s;
+  }
+  .customText-tY5LJn {
+    font-size: 15px;
+  }
+
+
+/* Message search menu and quickswitcher; code yoinked from the
+amazing LuckFire#4800! */
+  .searchFilter-2ESiM3,
+  .searchAnswer-3Dz2-q {
+    background-color: var(--background-secondary-alt) !important;
+  }
+  #search-results {
+    background-color: var(--background-secondary) !important;
+    box-shadow: 0 0 0 1px var(--background-tertiary), 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+  }
+  #search-results > .focused-2bY0OD {
+    background-color: var(--background-secondary) !important;
+  }
+  .option-96V44q.selected-rZcOL- {
+    background-color: var(--background-modifier-hover) !important;
+  }
+  .option-96V44q::after {
+    background: transparent !important
+  }
+  .option-96V44q.selected-rZcOL-::before {
+    background: var(--background-secondary-alt) !important;
+    padding-left: 10px
+  }
+  .react-datepicker,
+  .react-datepicker__header {
+    background-color: var(--background-secondary) !important;
+  }
+  .react-datepicker__day:not(:hover):not(
+    .react-datepicker__day--disabled):not(.react-datepicker__day--outside-month) {
+    background-color: var(--background-secondary-alt) !important;
+  }
+  .react-datepicker__day {
+    border-color: var(--background-tertiary) !important;
+  }
+  .react-datepicker__day--disabled,
+  .react-datepicker__day--outside-month {
+    background-color: var(--background-primary) !important;
+  }
+
+
+/* Sticker blocking */
+  .wrapper-2a6GCs .assetWrapper-3GNt0z[style] {
+    height: auto !important;
+    width: auto !important;
+  }
+  .wrapper-2a6GCs .assetWrapper-3GNt0z[style]:active {
+    height: 160px !important;
+    width: 160px !important;
+  }
+  .wrapper-2a6GCs .assetWrapper-3GNt0z[style]:after {
+    content: '1 blocked sticker - show sticker';
+    color: var(--text-link);
+  }
+  .wrapper-2a6GCs .assetWrapper-3GNt0z[style]:active:after {
+    content: none;
+  }
+  .wrapper-2a6GCs .assetWrapper-3GNt0z[style]:hover:after {
+    text-decoration: underline;
+  }
+  .wrapper-2a6GCs .assetWrapper-3GNt0z[style] .lottieCanvas-1W7L-f,
+  .wrapper-2a6GCs .assetWrapper-3GNt0z[style] .pngImage-33yLRP {
+    display: none;
+  }
+  .wrapper-2a6GCs .assetWrapper-3GNt0z[style]:active .lottieCanvas-1W7L-f,
+  .wrapper-2a6GCs .assetWrapper-3GNt0z[style]:active .pngImage-33yLRP {
+    display:block;
+  }
+
+
+/* Tweak Create Text Channel colours */
+  /* changes colour of main box */
+  .modal-2VIBV8.root-1gCeng.small-3iVZYw.fullscreenOnMobile-1bD22y {
+    background-color: var(--background-primary);
+  }
+
+  /* changes colour of footer */
+  .modal-2VIBV8.root-1gCeng > .footer-2gL1pp {  /* turkey snapper you're a genius thank you */
+    background-color: var(--background-secondary-alt);
+  }
+
+
+/* Upload popup */
+  /* colour of upload box */
+  .uploadModal-2ifh8j {
+    background-color: var(--background-primary) !important;
+  }
+
+  /* colour of the footer of the box where upload and spoiler button */
+  .footer-3mqk7D {
+    background-color: var(--background-secondary-alt) !important;
+  }
+
+
+/* VC backround image */
+  .minimum-28Z35l > .root-217Brm,
+  .video--KPXCT > .root-217Brm {
+    background:
+      url("https://cdn.discordapp.com/attachments/704992456634007563/772188587000070174/highscore.png")
+      center/100% no-repeat;
+  }
+  .minimum-28Z35l > .root-217Brm::before,
+  .video--KPXCT > .root-217Brm::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.65);
+  }
+  .videoControls-24w7Xp > .topControls-KKImPZ > div > .headerWrapper-3NUKsd > .title-3qD0b-,
+  .videoControls-24w7Xp > .topControls-KKImPZ > div > .headerWrapper-3NUKsd > .transparent-2ZlE3R  {
+    box-shadow: none !important;
+  }
