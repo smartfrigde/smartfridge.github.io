@@ -1,1 +1,10 @@
 
+{"main": {
+  "name": "SmartCord Store",
+  "value": "File",
+  "store": {
+    "plugin": [
+      {"name": "testPlugin", "manifest": "/plugins/testPlugin/manifest.json"},
+    ]
+  }
+}}
