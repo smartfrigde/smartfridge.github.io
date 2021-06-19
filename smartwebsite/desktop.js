@@ -200,13 +200,15 @@ function createWindowModal(){
 
 function armcord() {
  Desktop.createArmCordWindow({
-    resizeable: false,
-    draggable: false,
-    width: 600,
-    //icon: "<span class='mif-" + w_icons[index] + "'></span>",
-    title: "<div class='window-title'></div>",
-    content: `<img src="armcord-preview.png" alt="ArmCord">`,
-  });
+   resizeable: false,
+   draggable: true,
+   width: 600,
+   //icon: "<span class='mif-" + w_icons[index] + "'></span>",
+   title: "<div class='window-title'></div>",
+   //content: `<img src="armcord-preview.png" alt="ArmCord">`,
+   content: "https://discord.com/app",
+   clsContent: "bg-dark",
+ });
 }
 
 function createWindowYoutube(){
