@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>404 NOT FOUND</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+
+    <meta property="og:url" content="https://smartfridge.ml" />
+    <meta property="og:title" content="404 not found" />
+    <meta
+      property="og:description"
+      content="smartfridge personal website or something"
+    />
+    <meta property="og:type" content="website" />
+
+    <meta name="author" content="smartfridge" />
+    <meta
+      name="description"
+      content="smartfridge personal website or something"
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JS, Metro, CSS3, Javascript, HTML5, UI, Library, Web, Development, Framework"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <!-- Metro 4 -->
+    <link rel="stylesheet" href="metro/metro.css" />
+    <!-- Custom Website CSS -->
+    <link rel="stylesheet" href="website.css" />
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      if (window.location.protocol != "https:") {
+        location.href = location.href.replace("http://", "https://");
+      }
+    </script>
+
+    <script>
+      var metroAdblockSetup = {
+        checkInterval: 5000,
+        fireOnce: 3,
+        onBite: function () {
+          console.warn("Imagine adblock lol");
+        },
+      };
+    </script>
+    <h1 class="text-center">404 NOT FOUND</h1>
+    <p class="text-center">Check if you typed url correctly. :</p>
+    <div class="container">
+      <a
+        class="button shadowed"
+        href="https://smartfridge.ml/"
+        role="button"
+        >GET ME OUT OF THIS</a
+      >
+    </div>
+
+    <p class="text-center">Website is work in progress💕</p>
+
+    <!-- Metro 4 -->
+    <script src="metro/metro.js"></script>
+    <script>
+      $(function () {
+        $(window).on("adblockalert", function () {
+          Metro.toast.create("Imagine Adblock lmao", null, null, "alert", {
+            showTop: true,
+            distance: 150,
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
