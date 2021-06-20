@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>smartfridge website</title>  
+    <title>smartfridge website</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
 
@@ -39,10 +39,20 @@
         location.href = location.href.replace("http://", "https://");
       }
     </script>
+
+    <script>
+      var metroAdblockSetup = {
+        checkInterval: 5000,
+        fireOnce: 3,
+        onBite: function () {
+          console.warn("Imagine adblock lol");
+        },
+      };
+    </script>
     <h1 class="text-center">smartfridge personal website</h1>
     <p class="text-center">Things I work on:</p>
     <ul
-      id="paintings"
+      id="projects"
       data-role="list"
       data-sort-dir="desc"
       data-cls-list="unstyled-list row flex-justify-center mt-4"
@@ -51,10 +61,7 @@
       <li>
         <figure class="text-center">
           <div class="img-container thumbnail">
-            <img
-              src="https://repository-images.githubusercontent.com/313312687/3835ca80-b41e-11eb-94ab-d3c7763d812a"
-              alt="Artwork by CarnigeWasHere ;)"
-            />
+            <img src="armcord.png" alt="Artwork by CarnigeWasHere ;)" />
           </div>
           <h2>ArmCord</h2>
           <figcaption class="description text-bold">
@@ -67,10 +74,7 @@
       <li>
         <figure class="text-center">
           <div class="img-container thumbnail">
-            <img
-              src="https://repository-images.githubusercontent.com/263717223/c23a1d80-8764-11eb-86a4-27017d6e627e"
-              alt=""
-            />
+            <img src="lightcord.png" alt="" />
           </div>
           <h2>Lightcord</h2>
           <figcaption class="description text-bold">
@@ -79,9 +83,59 @@
           </figcaption>
         </figure>
       </li>
+      <li>
+        <figure class="text-center">
+          <div class="img-container thumbnail">
+            <img src="betterguilded.png" alt="PLACEHOLDER" />
+          </div>
+          <h2>BetterGuilded</h2>
+          <figcaption class="description text-bold">
+            BetterGuilded is client mod for Guilded designed to enhance your
+            Guilded experience without slowing down your PC. (placeholder image)
+          </figcaption>
+        </figure>
+      </li>
     </ul>
+    <div class="container">
+      <a
+        class="button shadowed"
+        href="https://github.com/smartfrigde"
+        role="button"
+        ><img src="github.png" /> Github</a
+      >
+      <a
+        class="button shadowed"
+        href="https://github.com/smartfrigde/ArmCord"
+        role="button"
+        ><img src="github.png" /> ArmCord</a
+      >
+      <a
+        class="button shadowed"
+        href="https://github.com/Lightcord/Lightcord"
+        role="button"
+        ><img src="github.png" /> Lightcord</a
+      >
+      <a
+        class="button shadowed"
+        href="https://github.com/BetterGuildedMod"
+        role="button"
+        ><img src="github.png" /> BetterGuilded</a
+      >
+    </div>
+
     <p class="text-center">Website is work in progress💕</p>
+
     <!-- Metro 4 -->
     <script src="metro/metro.js"></script>
+    <script>
+      $(function () {
+        $(window).on("adblockalert", function () {
+          Metro.toast.create("Imagine Adblock lmao", null, null, "alert", {
+            showTop: true,
+            distance: 150,
+          });
+        });
+      });
+    </script>
   </body>
 </html>

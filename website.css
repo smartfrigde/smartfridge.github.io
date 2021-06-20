@@ -5,11 +5,14 @@ h1 {
   color: #ffffff;
 }
 p {
-    color: #ffffff;
+  color: #ffffff;
 }
 h2 {
-    color: #ffffff;
+  color: #ffffff;
 }
 .description {
-    color: #ffffff;
+  color: #ffffff;
+}
+.container {
+  text-align: center;
 }
