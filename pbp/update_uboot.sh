@@ -2,12 +2,12 @@
 
 HEIGHT=15
 WIDTH=40
-CHOICE_HEIGHT=4
-BACKTITLE="Made by smartfridge"
+CHOICE_HEIGHT=3
+BACKTITLE="Made by smartfridge."
 TITLE="Uboot Installer"
 MENU="Choose one of the following options:"
 
-OPTIONS=(1 "Install Mainline Uboot"
+OPTIONS=(1 "Install Mainline BSP Uboot"
          2 "Install MrFixIt Uboot"
          3 "Exit")
 
@@ -22,7 +22,13 @@ CHOICE=$(dialog --clear \
 clear
 case $CHOICE in
         1)
-            echo "UNFINISHED"
+	   echo 'Installing Mainline BSP Uboot.'
+           wget -O /tmp/idbloader.img https://gitlab.manjaro.org/manjaro-arm/packages/core/uboot-pinebookpro-bsp/-/raw/master/idbloader.img?inline=false
+           wget -O /tmp/uboot.img https://gitlab.manjaro.org/manjaro-arm/packages/core/uboot-pinebookpro-bsp/-/raw/master/uboot.img?inline=false
+           wget -O /tmp/trust.img https://gitlab.manjaro.org/manjaro-arm/packages/core/uboot-pinebookpro-bsp/-/raw/master/trust.img?inline=false
+           sudo dd if=/tmp/idbloader.img of=/dev/mmcblk2 seek=64 conv=notrunc
+           sudo dd if=/tmp/uboot.img of=/dev/mmcblk2 seek=16384 conv=notrunc
+           sudo dd if=/tmp/trust.img of=/dev/mmcblk2 seek=24576 conv=notrunc
             ;;
         2)
             echo 'Installing MrFixIt Uboot.'
