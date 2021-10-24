@@ -1,3 +1,29 @@
-under construction ™️
-in following days, some links may result in 404
-xoxo
+<head>
+<link rel="canonical" href="https://smartfridge.space"/>
+<noscript><meta http-equiv="refresh" content="1;url=https://smartfridge.space"></noscript>
+<script type="text/javascript">
+var url = "https://smartfridge.space";
+var delay = "1000";
+window.onload = function ()
+{
+DoTheRedirect()
+}
+function DoTheRedirect()
+{
+setTimeout(GoToURL, delay)
+}
+function GoToURL()
+{
+// IE8 and lower fix
+if (navigator.userAgent.match(/MSIE\s(?!9.0)/))
+{
+var referLink = document.createElement("a");
+referLink.href = url;
+document.body.appendChild(referLink);
+referLink.click();
+}
+// All other browsers
+else { window.location.replace(url); }
+}
+</script>
+</head>
